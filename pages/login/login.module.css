@@ -1,0 +1,27 @@
+
+/* register.module.css */
+.registerContainer {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .formContainer {
+    width: 40%;
+    padding: 40px;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .formContainer h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  .imageContainer {
+    width: 60%;
+    /* background: url('path-to-image.jpg') no-repeat center center; */
+    background-size: cover;
+  }
+  

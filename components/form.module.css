@@ -1,0 +1,32 @@
+
+.inputWrapper {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 10px 40px; /* Adjust padding to accommodate icons */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .inputIcon {
+    position: absolute;
+    left: 10px; /* Adjust position for input icon */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent interaction */
+  }
+  
+  .eyeIcon {
+    position: absolute;
+    right: 10px; /* Adjust position for eye icon */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  /* Add any other styles you need */
+  
