@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
-import Form from '../../components/form';
+import Form from '../../components/userForm/form';
 import styles from './login.module.css';
-import main from "../../src/assets/main.png";
 import { login } from '../../services/auth';
 import { useNavigate } from 'react-router-dom';
+import { MdOutlineMail } from "react-icons/md";
+import { MdLockOutline } from "react-icons/md";
+import Poster from '../../components/poster';
 
 export default function Login() {
   const navigate = useNavigate();
   const pretoken = localStorage.getItem("token");
+  const [userData, setUserData] = useState([]);
 
   const [formData, setFormData] = useState({
     email: "",
@@ -33,14 +36,16 @@ export default function Login() {
         type: "email",
         placeholder: "Enter your email",
         value: formData.email,
-        onChange: handleChange
+        onChange: handleChange,
+        icon: <MdOutlineMail />
     },
     {
         name: "password",
         type: "password",
         placeholder: "Enter your password",
         value: formData.password,
-        onChange: handleChange
+        onChange: handleChange,
+        icon: <MdLockOutline />
     }
   ]
 
@@ -51,7 +56,6 @@ export default function Login() {
     }
     let isError = false;
     e.preventDefault();
-    console.log(formData);  
 
     Object.keys(errorMessages).forEach(key => {
       if(!errorMessages[key].isValid){
@@ -62,10 +66,12 @@ export default function Login() {
     if(!isError){
       try {
         const res = await login(formData);
+
       if(res.status === 200){
         alert("Logged In Successfully");
         const token = res.data.token;
         localStorage.setItem("token", token)
+        localStorage.setItem("userEmail", formData.email)
         navigate("/dashboard");
       }
       else if (res.status === 401){
@@ -102,12 +108,14 @@ export default function Login() {
 
   return (
     <div className={styles.registerContainer}>
-      <div className={styles.imageContainer}>
-          <img src={main} alt="Login image" />
+      <div className={styles.left}>
+          <Poster />
         </div>
       <div className={styles.formContainer}>
         <h1>Login</h1>
         <Form error={error}  formFields={formFields} onSubmit={onSubmit} errorMessages={errorMessages} buttonLabel="Login" />
+        <p className={styles.para}>Have an account ?</p>
+        <button  className={styles.registerButton} onClick={()=> navigate("/register")} >Register</button>
       </div>
     </div>
   );

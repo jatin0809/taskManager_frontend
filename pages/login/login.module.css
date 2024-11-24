@@ -1,27 +1,46 @@
 
-/* register.module.css */
 .registerContainer {
     display: flex;
     height: 100vh;
   }
   
   .formContainer {
+    margin-top: 7%;
     width: 40%;
+    align-items: center;
     padding: 40px;
-    background-color: #f7f7f7;
+    background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
   }
   
   .formContainer h1 {
-    margin-bottom: 20px;
-    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: 400;
   }
   
-  .imageContainer {
+  
+  .left{
     width: 60%;
-    /* background: url('path-to-image.jpg') no-repeat center center; */
-    background-size: cover;
   }
   
+  .para{
+    position: absolute;
+    top: 70%;
+    color: gray;
+    font-size: 14px;
+  }
+    
+  .registerButton{
+    width: 30%;
+    border-radius: 20px;
+    border: 1px solid #17A2B8;
+    background-color: white; 
+    color: #17A2B8;
+    padding: 11px;
+    position: absolute;
+    top: 76%;
+    font-size: 16px;
+  }

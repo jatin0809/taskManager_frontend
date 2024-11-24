@@ -1,0 +1,15 @@
+
+  .title{
+    font-size: 22px;
+    padding-bottom: 20px;
+  }
+  
+  .formContainer {
+    width: 40%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  

@@ -1,0 +1,68 @@
+.container{
+  width: 80%;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  position: relative; 
+  margin-bottom: 1rem; 
+}
+
+
+.inputFeild {
+  padding: 15px 2.5rem; /* Add padding for top/bottom and left/right */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Ensure padding is included in width */
+  font-size: 1rem; /* Set font size */
+}
+
+.inputIcon {
+  position: absolute; /* Position the icon */
+  left: 10px; /* Space from the left */
+  display: flex; /* Center the icon */
+  align-items: center; /* Center icon vertically */
+  pointer-events: none; /* Prevent clicks on the icon */
+  font-size: 20px;
+  color: gray;
+}
+
+.eyeIcon {
+  position: absolute; /* Position the eye icon */
+  right: 10px; /* Space from the right */
+  top: 10px;
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.formFeild {
+  width: 100%; /* Full width for the form field wrapper */
+}
+
+.errorMessage {
+  color: red; /* Red color for error messages */
+  font-size: 0.875rem; /* Smaller font for error messages */
+  margin-top: 1px; /* Reduced space above error messages */
+  line-height: 0; /* Set line-height to 1 to minimize extra space */
+  padding: 0; /* Remove padding to prevent extra spacing */
+  height: 5px; /* Allow height to adjust based on content */
+}
+
+.submitButton {
+  background-color: #17A2B8; 
+  color: white; 
+  border: none; 
+  border-radius: 20px; 
+  padding: 12px 1rem;
+  font-size: 1rem; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+  width: 100%; 
+  margin-top: 10px;
+}
+
+.submitButton:hover {
+  background-color: #0056b3; 
+}

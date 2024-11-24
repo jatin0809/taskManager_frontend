@@ -1,0 +1,96 @@
+.navbar {
+    height: 100vh;
+    width: 224px;
+    background-color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start; 
+    font-size: 18px;
+    border: 1px solid rgb(224, 243, 250);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+.logo i {
+    margin-right: 10px; 
+    min-width: 24px; 
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 8px;
+    font-size: 24px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    font-size: 21px;
+    align-items: flex-start;
+    width: 100%; 
+}
+
+.button {
+    background: none;
+    border: none;
+    color: gray;
+    padding: 10px 0;
+    margin: 5px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    width: 100%;
+}
+
+.buttons button i {
+    margin-right: 10px;
+    margin-left: 30px;
+    min-width: 24px;
+    text-align: center;
+    background: inherit;
+}
+
+.active {
+    background-color: #4391ED1A; /* Aqua background color */
+    color: black; /* Black text color */
+    border-radius: 5px; 
+}
+
+.logoutContainer {
+    margin-top: auto;
+    width: 100%; 
+}
+
+.logout {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20%;
+    padding: 10px 0;
+    font-size: 18px;
+    width: 100%; 
+}
+
+.logout i {
+    margin-right: 10px;
+    min-width: 24px;
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 5px;
+    font-size: 18px;
+}

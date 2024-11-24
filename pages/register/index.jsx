@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
-import Form from '../../components/form';
+import Form from '../../components/userForm/form';
 import styles from './register.module.css';
-import main from "../../src/assets/main.png";
 import { register } from '../../services/auth';
 import { useNavigate } from 'react-router-dom';
+import { FaRegUser } from "react-icons/fa";
+import { MdOutlineMail } from "react-icons/md";
+import { MdLockOutline } from "react-icons/md";
+import Poster from '../../components/poster';
 
 export default function Register() {
   const navigate = useNavigate();
@@ -34,29 +37,33 @@ export default function Register() {
     {
         name: "name",
         type: "text",
-        placeholder: "Enter your name",
+        placeholder: "Name",
         value: formData.name,
-        onChange: handleChange
+        onChange: handleChange,
+        icon: <FaRegUser />
     },
     {
         name: "email",
         type: "email",
-        placeholder: "Enter your email",
+        placeholder: "Email",
         value: formData.email,
-        onChange: handleChange
+        onChange: handleChange,
+        icon: <MdOutlineMail />
     },
     {
         name: "password",
         type: "password",
-        placeholder: "Enter your password",
+        placeholder: "Password",
         value: formData.password,
-        onChange: handleChange
+        onChange: handleChange,
+        icon: <MdLockOutline />
     }, {
         name: "confirmPassword",
         type: "password",
-        placeholder: "Confirm your password",
+        placeholder: "Confirm Password",
         value: formData.confirmPassword,
-        onChange: handleChange
+        onChange: handleChange,
+        icon: <MdLockOutline />
     }
   ]
 
@@ -119,12 +126,14 @@ export default function Register() {
 
   return (
     <div className={styles.registerContainer}>
-      <div className={styles.imageContainer}>
-          <img src={main} alt="Register image" />
+      <div className={styles.left}>
+        <Poster/>
         </div>
       <div className={styles.formContainer}>
-        <h1>register</h1>
+        <h1>Register</h1>
         <Form error={error}  formFields={formFields} onSubmit={onSubmit} errorMessages={errorMessages} buttonLabel="Register" />
+        <p className={styles.para}>Have an account ?</p>
+        <button  className={styles.loginButton} onClick={()=> navigate("/login")} >Log in</button>
       </div>
     </div>
   );

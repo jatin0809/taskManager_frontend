@@ -5,6 +5,8 @@ import Register from "./register";
 import Settings from "./settings";
 import Share from "./share";
 import NotFound from "./notFound";
+import TaskFormData from "./addTask";
+import Board from "./board";
 
 
 export {
@@ -14,5 +16,7 @@ export {
     Register,
     Settings,
     Share,
-    NotFound
+    NotFound,
+    TaskFormData,
+    Board
 }
